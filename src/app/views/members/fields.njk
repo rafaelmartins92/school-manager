@@ -1,0 +1,172 @@
+<div class="item">
+        <div>Avatar URL</div>
+        <div>
+          <input 
+            type="url" 
+            name="avatar_url" 
+            placeholder="http://"
+            value="{{ member.avatar_url }}"
+          >
+        </div>
+      </div>
+
+      <div class="item">
+        <div>Nome</div>
+        <div>
+          <input 
+            type="text" 
+            name="name" 
+            value="{{ member.name }}"
+          >
+        </div>
+      </div>
+
+       <div class="item">
+        <div>Email</div>
+        <div>
+          <input 
+            type="email" 
+            name="email" 
+            value="{{ member.email }}"
+          >
+        </div>
+      </div>
+      
+      <div class="item">
+        <div>Data de nascimento</div>
+        <div>
+          <input 
+            type="date" 
+            name="birth" 
+            placeholder="DD/MM/AAAA"
+            value="{{ member.birth }}"
+          >
+        </div>
+      </div>
+      
+      <div class="item">
+        <div>Sexo</div>
+        <div>
+          <span>
+            <input 
+              type="radio" 
+              name="gender" 
+              value="M" 
+              {% if member.gender == 'M'  %}
+              checked
+              {% endif %}>Masculino
+          </span>
+          <span>
+            <input 
+              type="radio" 
+              name="gender" 
+              value="F"
+              {% if member.gender == 'F'  %}
+              checked
+              {% endif %}>Feminino
+          </span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div>Estado</div>
+        <div>
+          <select name="state">
+            <option value="Acre"{% if member.state == "Acre" %} selected{% endif %}>
+              Acre
+            </option>
+            <option value="Alagoas"{% if member.state == "Alagoas" %} selected{% endif %}>
+              Alagoas
+            </option>
+            <option value="Amapá"{% if member.state == "Amapá" %} selected{% endif %}>
+              Amapá
+            </option>
+            <option value="Amazonas"{% if member.state == "Amazonas" %} selected{% endif %}>
+              Amazonas
+            </option>
+            <option value="Bahia"{% if member.state == "Bahia" %} selected{% endif %}>
+              Bahia
+            </option>
+            <option value="Ceará"{% if member.state == "Ceará" %} selected{% endif %}>
+              Ceará
+            </option>
+            <option value="Distritod Federal"{% if member.state == "Distritod Federal" %} selected{% endif %}>
+              Distrito Federal
+            </option>
+            <option value="Espírito Santo"{% if member.state == "Espírito Santo" %} selected{% endif %}>
+              Espírito Santo
+            </option>
+            <option value="Goiás"{% if member.state == "Goiás" %} selected{% endif %}>
+              Goiás
+            </option>
+            <option value="Maranhão"{% if member.state == "Maranhão" %} selected{% endif %}>
+              Maranhão
+            </option>
+            <option value="Mato Grosso"{% if member.state == "Mato Grosso" %} selected{% endif %}>
+              Mato Grosso
+            </option>
+            <option value="Mato Grosso do Sul"{% if member.state == "Mato Grosso do Sul" %} selected{% endif %}>
+              Mato Grosso do Sul
+            </option>
+            <option value="Minas Gerais"{% if member.state == "Minas Gerais" %} selected{% endif %}>
+              Minas Gerais
+            </option>
+            <option value="Pará"{% if member.state == "Pará" %} selected{% endif %}>
+              Pará
+            </option>
+            <option value="Paraíba"{% if member.state == "Paraíba" %} selected{% endif %}>
+              Paraíba
+            </option>
+            <option value="Paraná"{% if member.state == "Paraná" %} selected{% endif %}>
+              Paraná
+            </option>
+            <option value="Pernambuco"{% if member.state == "Pernambuco" %} selected{% endif %}>
+              Pernambuco
+            </option>
+            <option value="Piauí"{% if member.state == "Piauí" %} selected{% endif %}>
+              Piauí
+            </option>
+            <option value="Rio de Janeiro"{% if member.state == "Rio de Janeiro" %} selected{% endif %}>
+              Rio de Janeiro
+            </option>
+            <option value="Rio Grandre do Norte"{% if member.state == "Rio Grandre do Norte" %} selected{% endif %}>
+              Rio Grande do Norte
+            </option>
+            <option value="Rio Grande do Sul"{% if member.state == "Rio Grande do Sul" %} selected{% endif %}>
+              Rio Grande do Sul
+            </option>
+            <option value="Rondônia"{% if member.state == "Rondônia" %} selected{% endif %}>
+              Rondônia
+            </option>
+            <option value="Roraima"{% if member.state == "RR" %} selected{% endif %}>
+              Roraima
+            </option>
+            <option value="Santa Catarina"{% if member.state == "Santa Catarina" %} selected{% endif %}>
+              Santa Catarina
+            </option>
+            <option value="São Paulo"{% if member.state == "São Paulo" %} selected{% endif %}>
+              São Paulo
+            </option>
+            <option value="Sergipe"{% if member.state == "Sergipe" %} selected{% endif %}>
+              Sergipe
+            </option>
+            <option value="Tocantins"{% if member.state == "Tocantins" %} selected{% endif %}>
+              Tocantins
+            </option>
+          </select>
+        </div>
+      </div>
+
+       <div class="item">
+        <div>Áreas de interesse</div>
+        <div>
+          <input 
+            type="text" 
+            name="skills"
+            placeholder="Separe as aréas de interesse por vírgula"
+            value="{{member.skills}}"
+          >
+        </div>
+      </div> 
+
+      <button type="submit">Salvar</button>
